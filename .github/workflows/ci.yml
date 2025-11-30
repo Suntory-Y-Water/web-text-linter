@@ -18,6 +18,7 @@ concurrency:
 
 jobs:
   lint:
+    name: Lint
     timeout-minutes: 5
     runs-on: ubuntu-latest
     permissions:
@@ -30,6 +31,7 @@ jobs:
       - run: bun run lint
 
   type-check:
+    name: Type Check
     timeout-minutes: 5
     runs-on: ubuntu-latest
     permissions:
@@ -42,6 +44,7 @@ jobs:
       - run: bun run type-check
 
   build:
+    name: Build
     timeout-minutes: 5
     runs-on: ubuntu-latest
     permissions:
