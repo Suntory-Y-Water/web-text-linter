@@ -2,7 +2,10 @@
  * ドラフト関連のエラー
  */
 export class DraftError extends Error {
-  constructor(message: string, public readonly cause?: unknown) {
+  constructor(
+    message: string,
+    public readonly cause?: unknown,
+  ) {
     super(message);
     this.name = "DraftError";
   }
@@ -12,7 +15,10 @@ export class DraftError extends Error {
  * ストレージ関連のエラー
  */
 export class StorageError extends Error {
-  constructor(message: string, public readonly cause?: unknown) {
+  constructor(
+    message: string,
+    public readonly cause?: unknown,
+  ) {
     super(message);
     this.name = "StorageError";
   }
@@ -22,7 +28,10 @@ export class StorageError extends Error {
  * プリセット関連のエラー
  */
 export class PresetError extends Error {
-  constructor(message: string, public readonly cause?: unknown) {
+  constructor(
+    message: string,
+    public readonly cause?: unknown,
+  ) {
     super(message);
     this.name = "PresetError";
   }

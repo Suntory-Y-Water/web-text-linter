@@ -31,7 +31,7 @@
   - postMessage/onmessageのメッセージハンドラー実装
   - _Requirements: 1.6, 1.7, 7.1, 8.1, 8.4, 9.5_
 
-- [ ] 2.2 Lintリクエストの処理を実装する
+- [x] 2.2 Lintリクエストの処理を実装する
   - `{type: "lint", requestId, text}`メッセージの受信処理
   - textlint.lintText()の実行
   - LintMessageからLintResultへの変換（ruleId、message、line、column、startIndex、endIndex、severity、snippet、fixable）
@@ -39,7 +39,7 @@
   - エラー時の`{type: "lint:error", requestId, error}`送信
   - _Requirements: 1.2, 1.6, 1.7, 15.1, 15.2, 15.3_
 
-- [ ] 2.3 Fixリクエストの処理を実装する
+- [x] 2.3 Fixリクエストの処理を実装する
   - `{type: "fix", requestId, text}`メッセージの受信処理
   - textlint.fixText()の実行
   - 修正後テキストの抽出
@@ -55,36 +55,37 @@
 
 ### ドメイン層の実装
 
-- [ ] 3. (P) データモデルとバリデーションスキーマを実装する
-- [ ] 3.1 (P) LintResult型とValibotスキーマを定義する
+- [x] 3. (P) データモデルとバリデーションスキーマを実装する
+- [x] 3.1 (P) LintResult型とValibotスキーマを定義する
   - LintResult型の定義（id、ruleId、message、line、column、startIndex、endIndex、severity、snippet、fixable、fixText）
   - Valibotバリデーションスキーマの実装（非空文字列、整数範囲、startIndex < endIndexの保証）
   - WorkerRequest/WorkerResponseのUnion型定義
   - _Requirements: 1.7, 15.3, 15.4_
 
-- [ ] 3.2 (P) Preset型とエラー型を定義する
+- [x] 3.2 (P) Preset型とエラー型を定義する
   - Preset型の定義（id、name、description、rules）
   - DraftError、StorageError、PresetErrorの定義
   - MVP固定値（TECHNICAL_ARTICLE_PRESET）の定義
   - _Requirements: 5.1, 5.2, 10.1, 10.2, 10.3, 10.4_
 
 - [ ] 4. LintServiceを実装する
-- [ ] 4.1 LintServiceの初期化とWorker通信を実装する
+- [x] 4.1 LintServiceの初期化とWorker通信を実装する
   - LintWorkerインスタンスの生成と初期化
   - requestIdの生成と管理（UUID）
   - postMessageによるWorkerへのリクエスト送信
   - onmessageによるレスポンス受信とrequestId照合
   - _Requirements: 1.2, 1.5, 1.6_
 
-- [ ] 4.2 手動・自動Lint実行を実装する
+- [x] 4.2 手動・自動Lint実行を実装する
   - `requestLint({text, isManual})`メソッドの実装
   - debounce処理（1500ms）の実装
   - IME変換中の自動Lint抑制（`isManual === false`時のみ）
   - 最新requestIdのみ有効、古いリクエストは無視
   - Lint結果のValibotバリデーション
+  - WorkerResponseSchemaによる型安全なレスポンスパース
   - _Requirements: 1.2, 1.3, 1.4, 1.5, 15.4_
 
-- [ ] 4.3 Fix実行と再Lintを実装する
+- [x] 4.3 Fix実行と再Lintを実装する
   - `requestFix({text})`メソッドの実装
   - Workerへのfixリクエスト送信
   - 修正後テキストの受信と返却
