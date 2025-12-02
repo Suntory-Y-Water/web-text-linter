@@ -6,6 +6,8 @@
 
 必ず[コーディングルール](../../../docs/coding-rules.md)を確認してから実装してください。
 
+読んだことが証明できない限り作業は開始できません。
+
 ### インフラストラクチャ層の実装
 
 - [x] 1. (P) localStorageアダプターを実装する
@@ -22,7 +24,7 @@
   - _Requirements: 10.2, 10.3_
 
 - [ ] 2. textlint Web Workerを実装する
-- [ ] 2.1 Web Workerのセットアップとtextlint初期化を実装する
+- [x] 2.1 Web Workerのセットアップとtextlint初期化を実装する
   - textlintとtextlint-rule-preset-ja-technical-writingのインポート
   - Worker専用tsconfig.json（`lib: ["webworker"]`）の作成
   - textlintエンジンの初期化と技術記事プリセットの適用
