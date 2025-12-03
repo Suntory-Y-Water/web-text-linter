@@ -140,20 +140,20 @@
   - 初期テキストの設定
   - _Requirements: 1.1, 9.3_
 
-- [ ] 7.2 テキスト変更のdebounce処理を実装する
+- [x] 7.2 テキスト変更のdebounce処理を実装する
   - テキスト変更イベントのリスナー登録
   - debounce（300ms）後のonTextChangeコールバック実行
   - IME変換中の入力抑制（isComposingフラグ）
   - _Requirements: 1.3, 1.4_
 
-- [ ] 7.3 Lintハイライトとdecorations管理を実装する
+- [x] 7.3 Lintハイライトとdecorations管理を実装する
   - lintResults配列からRangeSetへの変換
   - UTF-16コード単位ベースの位置計算
   - 重大度（error/warning）に応じた装飾スタイル（下線・背景色）
   - decorationsの効率的な更新（React.memoとuseMemo）
   - _Requirements: 2.4, 2.6, 7.3_
 
-- [ ] 7.4 指摘選択時のスクロールと強調表示を実装する
+- [x] 7.4 指摘選択時のスクロールと強調表示を実装する
   - selectedIssueId変更時のエディタスクロール
   - 該当範囲の強調表示（一時的なdecoration追加）
   - 再Lint時の選択状態リセット
@@ -167,7 +167,7 @@
   - _Requirements: 1.1, 1.3, 1.4, 2.3, 2.4, 2.5, 2.6_
 
 - [ ] 8. (P) Lint結果パネルを実装する
-- [ ] 8.1 (P) 指摘リストの表示を実装する
+- [x] 8.1 (P) 指摘リストの表示を実装する
   - lintResults配列のフィルタリング（無視された指摘を除外）
   - 指摘アイテムの表示（行番号、ルールID、メッセージ、重大度）
   - 重大度の視覚的区別（色・アイコン）
