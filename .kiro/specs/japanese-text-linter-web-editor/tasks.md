@@ -102,7 +102,7 @@
   - _Requirements: 1.2, 1.3, 1.4, 1.5, 10.1_
 
 - [ ] 5. (P) DraftServiceを実装する
-- [ ] 5.1 (P) ドラフト保存・リストアを実装する
+- [x] 5.1 (P) ドラフト保存・リストアを実装する
   - `saveDraft({text})`メソッドの実装（debounce 1000ms待機、3000ms最大待機）
   - `loadDraft()`メソッドの実装（localStorage存在チェック）
   - `clearDraft()`メソッドの実装（ドラフトと無視情報の削除）
@@ -117,14 +117,14 @@
   - _Requirements: 4.1, 4.2, 4.3, 4.4, 10.2, 10.3_
 
 - [ ] 6. (P) PresetServiceを実装する
-- [ ] 6.1 (P) プリセット管理を実装する
+- [x] 6.1 (P) プリセット管理を実装する
   - `getAvailablePresets()`メソッドの実装（MVP段階では1つのみ）
   - `getCurrentPreset()`メソッドの実装
   - `setCurrentPreset({presetId})`メソッドの実装（localStorageに永続化）
   - デフォルトプリセットの保証（技術記事プリセット）
   - _Requirements: 5.1, 5.2, 5.3, 5.4, 13.2_
 
-- [ ] 6.2* (P) PresetServiceのユニットテストを実装する
+- [x] 6.2* (P) PresetServiceのユニットテストを実装する
   - プリセットID存在チェックのテスト
   - localStorage永続化のテスト
   - エラーハンドリングのテスト
