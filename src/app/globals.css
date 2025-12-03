@@ -120,3 +120,36 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* CodeMirror Lintハイライトスタイル */
+.cm-lint-error {
+  text-decoration: underline wavy red;
+  text-decoration-skip-ink: none;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.cm-lint-warning {
+  text-decoration: underline wavy orange;
+  text-decoration-skip-ink: none;
+  background-color: rgba(255, 165, 0, 0.1);
+}
+
+.dark .cm-lint-error {
+  background-color: rgba(255, 0, 0, 0.15);
+}
+
+.dark .cm-lint-warning {
+  background-color: rgba(255, 165, 0, 0.15);
+}
+
+/* 選択された指摘の強調表示スタイル */
+.cm-selected-issue {
+  background-color: rgba(255, 255, 0, 0.3);
+  border: 2px solid rgba(255, 255, 0, 0.6);
+  border-radius: 2px;
+}
+
+.dark .cm-selected-issue {
+  background-color: rgba(255, 255, 0, 0.2);
+  border-color: rgba(255, 255, 0, 0.5);
+}
