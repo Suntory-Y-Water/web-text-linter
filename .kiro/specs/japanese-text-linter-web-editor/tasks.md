@@ -133,7 +133,7 @@
 ### プレゼンテーション層の実装
 
 - [ ] 7. CodeMirrorエディタパネルを実装する
-- [ ] 7.1 EditorPanelのセットアップとCodeMirror初期化を実装する
+- [x] 7.1 EditorPanelのセットアップとCodeMirror初期化を実装する
   - CodeMirror 6のdynamic import（ssr: false）
   - useRefとuseEffectでのCodeMirrorインスタンス管理
   - Markdown拡張の適用
